@@ -1,0 +1,433 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px  30px;
+    color: white;
+      font-family: "Poppins", serif;
+      z-index: 9999;
+      animation: gbsd 2s ease-in-out forwards;
+      top: -100%;
+      position: relative;
+}
+@keyframes gbsd {
+  to{
+    top:0;
+  }
+}
+nav ul{
+display: flex;
+}
+ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+a{
+  text-decoration: none;
+}
+nav ul li a{
+    color: white;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    object-fit: contain;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+    background-color: hsla(244.85294117647055, 100%, 50%, 1);
+    
+    background-image: radial-gradient(circle at 50% 0%, hsla(319, 0%, 0%, 1) 49.15975941515135%, transparent 102.23193813062571%);
+    background-blend-mode: normal;
+    position: relative;
+    overflow-y: hidden;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image:  
+    repeating-linear-gradient(45deg, #444cf7 25%, transparent 25%, transparent 75%, #444cf7 75%, #444cf7),
+    repeating-linear-gradient(45deg, #444cf7 25%, transparent 25%, transparent 75%, #444cf7 75%, #444cf7);
+  
+  }
+.hero_cont{
+padding: 50px 0;
+}
+.hero_cont h1{
+  font-family: anton;
+    font-size: 3.7rem;
+width: 90%;
+margin: 0 auto;
+text-align: center;
+line-height: 1.5;
+letter-spacing:1px;
+ -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:line;
+}
+.hero_cont .hero_pro{
+    display: flex;
+    padding: 30px 20px;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+.hero_cont .hero_pro iframe{
+  width: 210px;
+  height: 200px;
+  scale: 1.05;
+}
+.view_more{
+  margin: 0 auto;
+  width: max-content;
+}
+.view_more button {
+  background-color: white;
+  color: black;
+  padding: 10px 50px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 0;
+}
+.view_more button a{
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+}
+.menu {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  cursor: pointer;
+z-index: 9999;
+}
+
+.menu .line {
+
+  transition: all 400ms ease-in-out;
+
+  background-color: white;
+
+  width: 30px;
+
+  height: 2px;
+
+}
+.menu.yh .line:nth-child(1) {
+
+  transform: translateY(10px) rotate(45deg);
+
+}
+
+.menu.yh .line:nth-child(2) {
+
+  opacity: 0;
+
+}
+
+.menu.yh .line:nth-child(3) {
+
+  transform: translateY(-10px) rotate(-45deg);
+
+}
+
+.active {
+
+  left: 0;
+
+}
+.about {
+
+  padding: 50px 0;
+
+  object-fit: cover;
+
+  background-position: center;
+
+  background-color: hsla(244.85, 100%, 15%, 1);
+
+}
+
+
+
+.about::before {
+
+  content: "";
+
+  position: absolute;
+
+  bottom: 500px;
+
+  left: -60%;
+
+  width: 300px;
+
+  height: 300px;
+
+  filter: blur(150px);
+
+  background: rgba(173, 55, 0, 1);
+
+  border-radius: 50%;
+
+}
+
+.about_cont {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  padding: 20px 60px;
+
+font-weight: 500;
+
+  gap: 2rem;
+
+}
+
+.about_cont img {
+
+  border-radius: 10px;
+
+  object-fit: contain;
+
+}
+
+.about > #headline {
+
+  font-size: 40px;
+
+  margin: 20px 90px;
+
+  position: relative;
+
+  width: max-content;
+
+  height: max-content;
+
+  -webkit-text-stroke: 1px white;
+
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+
+}
+
+.about > #headline::before {
+
+  content: "";
+
+  position: absolute;
+
+  height: 100%;
+
+  width: 3px;
+
+  background: #d2691e;
+
+  margin:0 -10px ;
+
+  top: 0;
+
+}
+
+ #headlit {
+
+  font-size: 40px;
+
+  margin: 20px 90px;
+
+  position: relative;
+
+  width: max-content;
+
+  height: max-content;
+
+  -webkit-text-stroke: 1px white;
+
+  -webkit-text-fill-color: transparent;
+
+  color: transparent;
+
+}
+
+ #headlit::before {
+
+  content: "";
+
+  position: absolute;
+
+  height: 100%;
+
+  width: 3px;
+
+  background: #d2691e;
+
+  margin:0 -10px ;
+
+  top: 0;
+
+}
+
+
+
+.about_cont h1 {
+
+  font-size: 2.5rem;
+
+  color: white;
+
+  position: relative;
+
+  width: max-content;
+
+  padding: 0 10px;
+
+  margin: 10px 0;
+
+}
+
+.about_cont p{
+
+  color: white;
+
+  font-size: 1.2rem;
+
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero_cont h1{
+        font-size: 2.7rem;
+        text-align: center;
+        width: 90%;
+        line-height: 1.5;
+    }
+    nav ul li{
+        margin: 0 10px;
+    }
+    nav{
+        padding: 30px 30px;
+    }
+    .hero_pro iframe:nth-child(1){
+      display: none;
+    }
+    .hero_pro iframe:nth-child(2){
+      display: none;
+    }
+    .hero_cont .hero_pro{
+      gap: 2rem;
+    }
+    nav ul{
+      flex-direction: column;
+
+      position: fixed;
+  
+      top: 90px;
+  
+      left: -100%;
+  
+      width: 100%;
+  
+      height: 100vh;
+  
+      transition: all 0.5s ease;
+  
+      align-items: flex-start;
+  
+      padding: 40px 0;
+  
+      background: #2e3436;
+  
+      border-top: 1px solid black;
+  
+      border-radius: 5px;
+    }
+    nav ul li a {
+
+      color: white;
+  
+      text-transform: uppercase;
+  
+    }
+  
+    nav ul li:hover {
+  
+      background-color: rgba(255, 255, 255, 0.4);
+  
+    }
+  
+    nav ul li a:hover::before {
+  
+      width: 0;
+  
+    }
+  
+    nav ul {
+  
+      gap: 1rem;
+  
+    }
+    
+  nav ul li {
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    width: 100%;
+
+  }
+  .about_cont {
+
+    grid-template-columns: 1fr;
+
+    padding: 30px 20px;
+
+  }
+  .about_cont > .headlit
+
+}
+@media  screen and (min-width: 768px)  {
+  .hero_cont .hero_pro{
+    gap: 2rem;
+  }
+  .hero_cont .hero_pro iframe{
+    width: 250px;
+    height: 250px;
+    scale: 1.05;
+  }
+ .menu{
+  display:none;
+ }
+}
