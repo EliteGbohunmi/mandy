@@ -481,10 +481,31 @@ font-weight: 500;
   padding: 50px 0;
   background-color: hsla(244.85, 100%, 15%, 1);
 }
+.proj_cards{
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr
+}
 .proj_card{
-  background: red;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
   padding: 60px 30px;
-  border: 1px solid white;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.features{
+  display: flex;
+  gap:1rem;
+  margin: 10px 0;
+}
+.features .sml{
+  background-color: white;
+  padding:5px 20px;
+  font-size: 10px;
+  border-radius: 40px;
+}
+.projects{
+  padding: 6rem 0;
 }
 @media screen and (max-width: 768px) {
   .service_card .container{
@@ -587,7 +608,7 @@ font-weight: 500;
     padding: 30px 20px;
 
   }
-  .about  #headlit{
+    #headlit{
 margin:20px  40px;
   }
 
