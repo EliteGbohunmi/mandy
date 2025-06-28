@@ -39,6 +39,15 @@ ScrollReveal().reveal(".for", {
 
   easing: "ease-in-out",
 });
+ScrollReveal().reveal(".fr", {
+  distance: "50px",
+
+  origin: "bottom",
+
+  duration: 1000,
+
+  easing: "ease-in-out",
+});
 
 
 let menu = document.querySelector(".menu");
