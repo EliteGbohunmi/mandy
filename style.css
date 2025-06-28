@@ -4,10 +4,11 @@
     box-sizing: border-box; 
   font-weight: 400;
   font-style: normal;
+  font-family: "Poppins", serif;
 }
 
 body {
-
+  background-color: hsla(244.85, 100%, 15%, 1);
 }
 img{
   width: 100%;
@@ -46,7 +47,7 @@ nav ul li a{
     transition: all 0.3s ease-in-out;
 }
 .hero{
-    height: 100vh;
+    height: max-content;
     width: 100%;
     background-position: center;
     object-fit: contain;
@@ -54,7 +55,6 @@ nav ul li a{
     color: white;
     overflow-x: hidden;
     background-color: hsla(244.85294117647055, 100%, 50%, 1);
-    
     background-image: radial-gradient(circle at 50% 0%, hsla(319, 0%, 0%, 1) 49.15975941515135%, transparent 102.23193813062571%);
     background-blend-mode: normal;
     position: relative;
@@ -325,13 +325,185 @@ font-weight: 500;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
 
 }
+.buttons {
 
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+}
+
+.buttons button {
+
+  padding: 10px 30px;
+
+  border-radius: 5px;
+
+  background-color: #fff;
+
+  color: white;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+}
+
+.buttons button:hover {
+
+  background-color: #d2691e;
+
+}
+
+.card_box span {
+  position: absolute;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  top: -5px;
+  left: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.card_box span::before {
+  content: 'Premium';
+  position: absolute;
+  width: 160%;
+  height: 28px;
+  background-image: linear-gradient(45deg, #ff9e3e 0%, #ffc64b 100%); transform: rotate(-45deg) translateY(-15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+.card_box {
+  width: 100%;
+  height: auto; 
+  min-height: 360px;
+  border-radius: 20px;
+  background-color: hsla(244.85, 100%, 15%, 1); /* dark blue */
+  color: #ffffff; position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  transition: all .3s;
+  padding: 20px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid white;
+}
+
+.card_content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  margin-top: 60px; /* push down below ribbon */
+}
+
+.card_content h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card_content p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+.card_content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 15px 0;
+}
+
+.card_content li {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.card_content i {
+  color: #ffb144;
+  font-size: 19px;
+}
+
+/* CTA Button */
+.cta {
+  margin-top: 10px;
+  padding: 8px 16px;
+   background: linear-gradient(45deg, #ff6a3d, #ffb347);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+  float:right;
+}
+
+.cta:hover {
+  background: linear-gradient(45deg, #ffb144, #ff6547);
+}
+.service_card .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr  ;
+  place-items: center;
+  gap: 2rem;
+  justify-content: center;
+  padding: 10px 50px;
+}
+.bhh{
+  font-size: 50px;
+  text-align: center;
+  margin: 30px 0;
+  color: #fff;
+}
+.contact {
+  padding: 50px 0;
+  background-color: hsla(244.85, 100%, 15%, 1);
+}
+.proj_card{
+  background: red;
+  padding: 60px 30px;
+  border: 1px solid white;
+}
 @media screen and (max-width: 768px) {
+  .service_card .container{
+    display: grid;
+    grid-template-columns: 1fr ;
+    padding: 10px 30px;
+  }
     .hero_cont h1{
         font-size: 2.7rem;
         text-align: center;
-        width: 90%;
+        width: 100%;
         line-height: 1.5;
+        padding: 0 5px;
+        line-break: anywhere;
+    }
+    .hero_cont .hero_pro iframe{
+      width: 170px;
+      height: 170px;
+      scale: 1.05;
     }
     nav ul li{
         margin: 0 10px;
@@ -415,7 +587,9 @@ font-weight: 500;
     padding: 30px 20px;
 
   }
-  .about_cont > .headlit
+  .about  #headlit{
+margin:20px  40px;
+  }
 
 }
 @media  screen and (min-width: 768px)  {
