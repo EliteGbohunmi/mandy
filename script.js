@@ -1,21 +1,37 @@
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-
 const mobileSplit = new SplitText("#headline", { type: "chars" });
 
 gsap.from(mobileSplit.chars, {
   scrollTrigger: {
     trigger: "#headline",
     start: "top 80%",
-    toggleActions: "play none none none"
+    toggleActions: "play none none none",
   },
   opacity: 0,
   y: 20,
   duration: 0.6,
   ease: "power1.out",
   stagger: 0.01,
-  delay: 2.5
+  delay: 2.5,
 });
+gsap.utils.toArray(".headliner").forEach((el) => {
+  const split = new SplitText(el, { type: "words" });
+  gsap.from(split.words, {
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    opacity: 0,
+    y: 20,
+    duration: 1.2,
+    ease: "power1.out",
+    stagger: 0.01,
+
+  });
+});
+
 
 ScrollReveal().reveal(".fir", {
   distance: "50px",
@@ -48,7 +64,6 @@ ScrollReveal().reveal(".fr", {
 
   easing: "ease-in-out",
 });
-
 
 let menu = document.querySelector(".menu");
 function opens() {
