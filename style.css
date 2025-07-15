@@ -12,7 +12,7 @@ a{
   font-weight: 600;
 }
 body {
-  background-color: hsla(244.85, 100%, 15%, 1);
+  background-color: #06004d;
 }
 img{
   width: 100%;
@@ -173,7 +173,7 @@ z-index: 9999;
   padding: 50px 0;
 
   object-fit: cover;
-
+position: relative;
   background-position: center;
 
   background-color: hsla(244.85, 100%, 15%, 1);
@@ -340,6 +340,29 @@ font-weight: 500;
 }
 .services{
   font-family: "Poppins", serif;
+  background-color: #0e0388;
+  position: relative;
+}
+.service_card{
+  padding: 3rem 0;
+}
+.custom-shape-divider-top-1752592339 {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1752592339 svg {
+  position: relative;
+  display: block;
+  width: calc(176% + 1.3px);
+  height: 75px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1752592339 .shape-fill {
+  fill: #06004d;
 }
 .buttons button {
 
@@ -512,7 +535,16 @@ border: 5px solid #fff;
  
 
 }
+.proj_card:hover{
+scale:1.020;
 
+}
+.card_box:hover{
+scale:1.020;
+}
+img:hover{
+scale:1.020;
+}
 .proj_card .card_top{
 padding: 0px 10px;
 }
@@ -556,7 +588,91 @@ padding: 5px 10px 20px 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+.completed{
+  display: flex;
+  gap: 2rem;
+  margin: 10px 0;
+
+}
+.completed h1{
+  font-size:40px;
+  margin:-10px 0;
+  padding: 10px 0;
+}
+.completed p{
+  color: #ffb144;
+  margin:-20px 0;
+  font-size: 14px;
+}
+.site-footer {
+  background-color: #0b0c2e; 
+  color: #f3f3f3;
+  padding: 40px 20px 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: #f3f3f3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d4af7f;
+}
+
+.footer-socials .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-socials .social-icons a {
+  color: #f3f3f3;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials .social-icons a:hover {
+  color: #d4af7f;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #fff2;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
+
 @media screen and (max-width: 1200px) {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }                                                                        
   .proj_cards{
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -590,7 +706,7 @@ padding: 5px 10px 20px 10px;
     .hero_cont h1{
         font-size: 2.7rem;
         text-align: center;
-        width: 100%;
+        width: 90%;
         line-height: 1.5;
         padding: 0 5px;
         line-break: anywhere;
